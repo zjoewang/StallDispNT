@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/hr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="HR: "
+        android:textColor="#FF00FF"
+        android:textSize="48sp"
+        android:textStyle="bold" />
+    <View
+        android:id="@+id/separator1"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_below="@id/hr"
+        android:layout_centerHorizontal="true"
+        android:background="#eeeeee" />
+    <TextView
+        android:id="@+id/sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/separator1"
+        android:text="SpO2: "
+        android:textColor="#FFFF00"
+        android:textSize="48sp"
+        android:textStyle="bold" />
+    <View
+        android:id="@+id/separator2"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_below="@id/sp"
+        android:layout_centerHorizontal="true"
+        android:background="#eeeeee" />
+    <TextView
+        android:id="@+id/temp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/separator2"
+        android:text="Temp: "
+        android:textSize="36sp"
+        android:textStyle="bold" />
+    <View
+        android:id="@+id/separator3"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_below="@id/temp"
+        android:layout_centerHorizontal="true"
+        android:background="#eeeeee" />
+    <TextView
+        android:id="@+id/rawhr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/separator3"
+        android:text="raw HR: "
+        android:textSize="30sp"
+        android:textStyle="bold" />
+    <View
+        android:id="@+id/separator4"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_below="@id/rawhr"
+        android:layout_centerHorizontal="true"
+        android:background="#eeeeee" />
+    <TextView
+        android:id="@+id/rawsp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/separator4"
+        android:text="raw SP: "
+        android:textSize="30sp"
+        android:textStyle="bold" />
+</RelativeLayout>
