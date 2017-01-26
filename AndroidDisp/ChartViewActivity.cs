@@ -256,7 +256,6 @@ namespace ESB
             }
 
             MyModel.Title = string.Format("HR = {0} bpm, SP = {1}%", curHR, curSP);
-            MyModel.Subtitle= string.Format("T= {0}F, raw HR={1}, SP={2}", curTemp, curRawHR, curRawSP);
             MyModel.InvalidatePlot(true);
         }
     }

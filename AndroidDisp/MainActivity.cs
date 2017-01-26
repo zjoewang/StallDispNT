@@ -21,7 +21,7 @@ using System.Threading;
 
 namespace ESB
 {
-	[Activity (Label = "@string/app_name", MainLauncher = true, Icon = "@drawable/esblogo")]
+	[Activity (Label = "@string/app_name", MainLauncher = true, Icon = "@drawable/esbwall")]
 	[IntentFilter (new[] { UsbManager.ActionUsbDeviceAttached })]
 	[MetaData (UsbManager.ActionUsbDeviceAttached, Resource = "@xml/device_filter")]
 	class MainActivity : Activity
@@ -29,7 +29,7 @@ namespace ESB
 		static readonly string TAG = typeof(MainActivity).Name;
 		const string ACTION_USB_PERMISSION = "com.hoho.android.usbserial.examples.USB_PERMISSION";
 
-        string build_number = "0.812";
+        string build_number = "0.901";
 
 		UsbManager usbManager;
 		ListView listView;

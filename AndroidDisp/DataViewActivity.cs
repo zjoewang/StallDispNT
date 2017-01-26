@@ -34,8 +34,6 @@ namespace ESB
 		TextView hrTextView;
 		TextView spTextView;
 		TextView tempTextView;
-		TextView rawhrTextView;
-		TextView rawspTextView;
 
         string input_line;
 
@@ -52,9 +50,7 @@ namespace ESB
 			usbManager = GetSystemService(Context.UsbService) as UsbManager;
 			hrTextView = FindViewById<TextView>(Resource.Id.hr);
 			spTextView = FindViewById<TextView>(Resource.Id.sp);
-			tempTextView = FindViewById<TextView>(Resource.Id.temp);
-			rawhrTextView = FindViewById<TextView>(Resource.Id.rawhr);
-			rawspTextView = FindViewById<TextView>(Resource.Id.rawsp);
+            tempTextView = FindViewById<TextView>(Resource.Id.temp);
 		}
 
 		protected override void OnPause ()
@@ -156,21 +152,11 @@ namespace ESB
 
             ParseLog.GetData(line, out hr, out sp, out temp, out calculated);
 
-            if (temp > 0.0)
-            {
-                tempTextView.Text = "Temp = " + temp.ToString() + "F";
-            }
-            else if (calculated)
+            if (calculated)
             {
                 hrTextView.Text = "HR = " + hr.ToString() + " bpm";
                 spTextView.Text = "SP = " + sp.ToString() + "%";
             }
-            else
-            {
-                rawhrTextView.Text = "raw HR = " + hr.ToString() + " bpm";
-                rawspTextView.Text = "raw SP = " + sp.ToString() + "%";
-            }
 		}
 	}
 }
-
