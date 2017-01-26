@@ -78,6 +78,7 @@ namespace ESB
             linearAxis1.Position = AxisPosition.Left;
             linearAxis1.Minimum = 10.0;
             linearAxis1.Maximum = 250.0;
+            linearAxis1.TextColor = OxyColors.Magenta;
             plotModel1.Axes.Add(linearAxis1);
             var linearAxis2 = new LinearAxis();
             linearAxis2.MajorGridlineStyle = LineStyle.Solid;
@@ -87,6 +88,7 @@ namespace ESB
             linearAxis2.Key = "SP";
             linearAxis2.Minimum = 50.0;
             linearAxis2.Maximum = 100.0;
+            linearAxis2.TextColor = OxyColors.Yellow;
             plotModel1.Axes.Add(linearAxis2);
 
             seriesHR = new LineSeries
